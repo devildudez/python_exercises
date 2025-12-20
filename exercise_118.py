@@ -13,6 +13,9 @@ herb» и «Information school graduate seeks graduate school information».
 забывайте игнорировать знаки препинания при выявлении результата.
 """
 stroka=input()
+x=stroka.lower()
+x.replace(',', '')
+
 if stroka==stroka[::-1]:
     print("Its a palindrome")
 else:
