@@ -37,4 +37,3 @@ for i in range(len(a)):
     elif a[i]==0:
         b.append(a[i])
 print(b)
-
