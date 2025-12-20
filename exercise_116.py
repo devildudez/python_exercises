@@ -9,3 +9,18 @@
 использовать функцию для идентификации и вывода на экран всех совершенных чисел в диапазоне от 1 до 10 000. При решении этой задачи
 импортируйте функцию, написанную в упражнении 115.
 """
+def divisors(number: int) -> bool:
+    c: int = 0
+    for i in range(1, number):
+        if number % i == 0:
+            c += i
+    if c == number:
+        return True
+    else:
+        return False
+
+
+number = divisors(int(input()))
+print(number)
+
+
