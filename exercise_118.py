@@ -12,3 +12,8 @@ herb» и «Information school graduate seeks graduate school information».
 Напишите программу, которая будет запрашивать строку у пользователя и оповещать его о том, является ли она словесным палиндромом. Не
 забывайте игнорировать знаки препинания при выявлении результата.
 """
+stroka=input()
+if stroka==stroka[::-1]:
+    print("Its a palindrome")
+else:
+    print("It is not a palindrome")
