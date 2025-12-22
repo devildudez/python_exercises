@@ -75,42 +75,33 @@ def insertion_sort_with_steps(arr: list) -> list:
 # ============================================================
 
 if __name__ == "__main__":
-    # Пример 1: Базовое использование
-    print("=" * 50)
-    print("ПРИМЕР 1: Базовая сортировка")
-    print("=" * 50)
 
-    numbers = [12, 11, 13, 5, 6]
-    print(f"До:    {numbers}")
-    insertion_sort(numbers)
-    print(f"После: {numbers}")
+    # Пример 1: Пошаговая демонстрация
+    # print("\n" + "=" * 50)
+    # print("ПРИМЕР 1: Пошаговая демонстрация")
+    # print("=" * 50 + "\n")
+    #
+    # demo = [34, 8, 64, 51, 32, 21]
+    # insertion_sort_with_steps(demo)
 
-    # Пример 2: Пошаговая демонстрация
-    print("\n" + "=" * 50)
-    print("ПРИМЕР 2: Пошаговая демонстрация")
-    print("=" * 50 + "\n")
+    # Пример 2: Уже отсортированный — O(n)!
+    # print("\n" + "=" * 50)
+    # print("ПРИМЕР 2: Уже отсортированный массив")
+    # print("=" * 50)
+    #
+    # sorted_arr = [1, 2, 3, 4, 5]
+    # print(f"До:    {sorted_arr}")
+    # insertion_sort_with_steps(sorted_arr)
+    # print(f"После: {sorted_arr}")
+    # print("✅ Для отсортированного — всего O(n) операций! (лучший случай)")
 
-    demo = [34, 8, 64, 51, 32, 21]
-    insertion_sort_with_steps(demo)
-
-    # Пример 3: Уже отсортированный — O(n)!
-    print("\n" + "=" * 50)
-    print("ПРИМЕР 3: Уже отсортированный массив")
-    print("=" * 50)
-
-    sorted_arr = [1, 2, 3, 4, 5]
-    print(f"До:    {sorted_arr}")
-    insertion_sort(sorted_arr)
-    print(f"После: {sorted_arr}")
-    print("✅ Для отсортированного — всего O(n) операций! (лучший случай)")
-
-    # Пример 4: Худший случай — обратный порядок
+    # # Пример 3: Худший случай — обратный порядок
     print("\n" + "=" * 50)
     print("ПРИМЕР 4: Обратный порядок (худший случай)")
     print("=" * 50)
 
     reverse_arr = [5, 4, 3, 2, 1]
     print(f"До:    {reverse_arr}")
-    insertion_sort(reverse_arr)
+    insertion_sort_with_steps(reverse_arr)
     print(f"После: {reverse_arr}")
     print("⚠️  Худший случай — каждый элемент сдвигается максимально")
