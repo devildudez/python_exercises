@@ -76,22 +76,22 @@ def selection_sort_with_steps(arr: list) -> list:
 
 if __name__ == "__main__":
     # Пример 1: Базовое использование
-    print("=" * 50)
-    print("ПРИМЕР 1: Базовая сортировка")
-    print("=" * 50)
-
-    numbers = [64, 25, 12, 22, 11]
-    print(f"До:    {numbers}")
-    selection_sort(numbers)
-    print(f"После: {numbers}")
+    # print("=" * 50)
+    # print("ПРИМЕР 1: Базовая сортировка")
+    # print("=" * 50)
+    #
+    # numbers = [64, 25, 12, 22, 11]
+    # print(f"До:    {numbers}")
+    # selection_sort(numbers)
+    # print(f"После: {numbers}")
 
     # Пример 2: Пошаговая демонстрация
-    print("\n" + "=" * 50)
-    print("ПРИМЕР 2: Пошаговая демонстрация")
-    print("=" * 50 + "\n")
-
-    demo = [29, 10, 14, 37, 13]
-    selection_sort_with_steps(demo)
+    # print("\n" + "=" * 50)
+    # print("ПРИМЕР 2: Пошаговая демонстрация")
+    # print("=" * 50 + "\n")
+    #
+    # demo = [29, 10, 14, 37, 13]
+    # selection_sort_with_steps(demo)
 
     # Пример 3: Уже отсортированный (всё равно O(n²)!)
     print("\n" + "=" * 50)
@@ -100,6 +100,6 @@ if __name__ == "__main__":
 
     sorted_arr = [1, 2, 3, 4, 5]
     print(f"До:    {sorted_arr}")
-    selection_sort(sorted_arr)
+    selection_sort_with_steps(sorted_arr)
     print(f"После: {sorted_arr}")
     print("⚠️  Даже для отсортированного — всё равно O(n²) сравнений!")
