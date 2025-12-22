@@ -18,3 +18,24 @@ task = '''
 функции и выведите на экран.
 '''
 
+def format_sep_ru(bla_bla: list[str]) -> str:
+    return ''
+
+if __name__ == '__main__':
+
+    bla = ['яблоки']
+    bla_ru = format_sep_ru(bla)
+    print(bla_ru)
+
+    bla = ['яблоки', 'апельсины']
+    bla_ru = format_sep_ru(bla)
+    print(bla_ru)
+
+    bla = ['яблоки', 'апельсины', 'бананы']
+    bla_ru = format_sep_ru(bla)
+    print(bla_ru)
+
+    bla = ['яблоки', 'апельсины', 'бананы', 'лимоны']
+    bla_ru = format_sep_ru(bla)
+    print(bla_ru)
+
