@@ -20,15 +20,15 @@ def insertion_sort(arr: list) -> list:
     for i in range(1, len(arr)):
         key = arr[i]  # Элемент, который будем вставлять
         j = i - 1
-        
+
         # Сдвигаем элементы вправо, пока они больше key
         while j >= 0 and arr[j] > key:
             arr[j + 1] = arr[j]
             j -= 1
-        
+
         # Вставляем key на своё место
         arr[j + 1] = key
-    
+
     return arr
 
 
@@ -37,35 +37,35 @@ def insertion_sort_with_steps(arr: list) -> list:
     Версия с выводом каждого шага — для демонстрации на уроке.
     """
     a = arr.copy()  # Не портим оригинал
-    
+
     print(f"Исходный массив: {a}")
     print(f"[{a[0]}] — считаем первый элемент отсортированным")
     print("-" * 50)
-    
+
     for i in range(1, len(a)):
         key = a[i]
         j = i - 1
-        
+
         print(f"Шаг {i}: берём key = {key}")
         print(f"        отсортированная часть: {a[:i]}")
-        
+
         shifts = 0
         while j >= 0 and a[j] > key:
             a[j + 1] = a[j]
             shifts += 1
             j -= 1
-        
+
         a[j + 1] = key
-        
+
         if shifts > 0:
             print(f"        сдвинули {shifts} элемент(ов) вправо")
             print(f"        вставили {key} на позицию {j + 1}")
         else:
             print(f"        {key} уже на своём месте (больше предыдущих)")
-        
+
         print(f"        результат: {a}")
         print()
-    
+
     print(f"Отсортировано: {a}")
     return a
 
@@ -79,36 +79,36 @@ if __name__ == "__main__":
     print("=" * 50)
     print("ПРИМЕР 1: Базовая сортировка")
     print("=" * 50)
-    
+
     numbers = [12, 11, 13, 5, 6]
     print(f"До:    {numbers}")
     insertion_sort(numbers)
     print(f"После: {numbers}")
-    
+
     # Пример 2: Пошаговая демонстрация
     print("\n" + "=" * 50)
     print("ПРИМЕР 2: Пошаговая демонстрация")
     print("=" * 50 + "\n")
-    
+
     demo = [34, 8, 64, 51, 32, 21]
     insertion_sort_with_steps(demo)
-    
+
     # Пример 3: Уже отсортированный — O(n)!
     print("\n" + "=" * 50)
     print("ПРИМЕР 3: Уже отсортированный массив")
     print("=" * 50)
-    
+
     sorted_arr = [1, 2, 3, 4, 5]
     print(f"До:    {sorted_arr}")
     insertion_sort(sorted_arr)
     print(f"После: {sorted_arr}")
     print("✅ Для отсортированного — всего O(n) операций! (лучший случай)")
-    
+
     # Пример 4: Худший случай — обратный порядок
     print("\n" + "=" * 50)
     print("ПРИМЕР 4: Обратный порядок (худший случай)")
     print("=" * 50)
-    
+
     reverse_arr = [5, 4, 3, 2, 1]
     print(f"До:    {reverse_arr}")
     insertion_sort(reverse_arr)
