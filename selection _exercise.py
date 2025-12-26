@@ -1,4 +1,11 @@
+task = """
+отсортировать массив [12, 6, 3, 12, 7] метдом selection sort 
+и сказать почему это не лучший метод сортировки для данного массива
+"""
+
+
 def selection(arr: list) -> list:
+
     n = len(arr)
 
     for i in range(n):
@@ -11,21 +18,7 @@ def selection(arr: list) -> list:
             arr[i], arr[min_index] = arr[min_index], arr[i]
 
     return arr
-a=[12, 6, 3, 12, 7]
+
+
+a = [12, 6, 3, 12, 7]
 print(selection(a))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
